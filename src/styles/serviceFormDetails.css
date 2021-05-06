@@ -1,0 +1,36 @@
+#container {
+    margin-left: 2rem;
+}
+
+.serviceForm {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.input {
+    width: 25rem;
+}
+
+.label {
+    font-size: 1.2rem;
+}
+
+.button {
+    width: 9rem;
+    height: 2rem;
+    background-color: #3a3aba;
+    color: #fff;
+    font-family: "Comfortaa", Arial, sans-serif;
+	font-size: 14px;
+}
+
+ul {
+    padding-left: 1rem;
+}
