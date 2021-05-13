@@ -1,15 +1,24 @@
-import { getRequests } from "./dataAccess.js";
+import { getRequests, getPlumbers } from "./dataAccess.js";
 
-
+const plumbers = getPlumbers()
 
 const convertRequestsToHTML = (requestObject) => {
     return `
     <li>${requestObject.description}</li>
-    <button class="request__delete"
-                id="request--${requestObject.id}">
-            Delete
-        </button>
-    `
+    <li>${requestObject.address}</li>
+    <li>${requestObject.budget}</li>
+    <li>${requestObject.neededBy}</li>
+    <button class="request__delete" id="request--${requestObject.id}">Delete</button>
+    <select class="plumbers" id="plumbers">
+    <option value="">Choose</option>
+    ${
+        plumbers.map(
+            plumber => {
+                return `<option value="${requestObject.id}--${plumber.id}">${plumber.plumberName}</option>`
+            }
+        ).join("")
+    }
+</select>`
 }
 
 
@@ -27,6 +36,5 @@ export const Requests = () => {
     </ul>`
     return html
 }
-
 
 

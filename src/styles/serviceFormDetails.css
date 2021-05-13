@@ -35,6 +35,14 @@ ul {
     padding-left: 1rem;
 }
 
+li {
+    list-style: none;
+}
+
 .request__list {
     display: flex;
+}
+
+.request__delete {
+    margin-bottom: 2rem;
 }
